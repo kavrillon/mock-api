@@ -1,0 +1,39 @@
+{
+  "page": 1,
+  "per_page": 2,
+  "total": 3,
+  "total_pages": 2,
+  "data": [
+    {
+      "id": 1,
+      "name": "Medor & Cie Vichy",
+      "slug": "medor-cie-vichy",
+      "grade": 4.5,
+      "reviews": [
+        {
+          "grade": 4,
+          "name": "Toto",
+          "comment": "Good"
+        },
+        {
+          "grade": 5,
+          "name": "Tata",
+          "comment": "Excellent!"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Medor & Cie Caluire & Cuire",
+      "slug": "medor-cie-caluire-cuire",
+      "grade": 3,
+      "reviews": [
+        {
+          "grade": 3,
+          "name": "Titi",
+          "comment": "Correct"
+        }
+      ]
+    }
+  ]
+}

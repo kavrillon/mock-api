@@ -1,0 +1,18 @@
+{
+  "id": 1,
+  "name": "Medor & Cie Vichy",
+  "slug": "medor-cie-vichy",
+  "grade": 4.5,
+  "reviews": [
+    {
+      "grade": 4,
+      "name": "Toto",
+      "comment": "Good"
+    },
+    {
+      "grade": 5,
+      "name": "Tata",
+      "comment": "Excellent!"
+    }
+  ]
+}
