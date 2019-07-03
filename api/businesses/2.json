@@ -1,0 +1,18 @@
+{
+  "id": 2,
+  "name": "Medor & Cie Caluire & Cuire",
+  "slug": "medor-cie-caluire-cuire",
+  "grade": 3,
+  "reviews": [
+    {
+      "grade": 3,
+      "name": "Titi",
+      "comment": "Correct"
+    },
+    {
+      "grade": 3,
+      "name": "Titi",
+      "comment": "Pas mal"
+    }
+  ]
+}
