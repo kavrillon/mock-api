@@ -13,6 +13,11 @@
       "grade": 3,
       "name": "Titi",
       "comment": "Pas mal"
+    },
+    {
+      "grade": 3,
+      "name": "Tata",
+      "comment": "Test"
     }
   ]
 }
