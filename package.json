@@ -1,0 +1,23 @@
+{
+  "name": "kan-mock-api",
+  "version": "1.0.0",
+  "main": "src/generate.js",
+  "repository": "git@github.com:kavrillon/mock-api.git",
+  "scripts": {
+    "generate": "rimraf dist && babel-node src/generate",
+    "start": "nodemon --ignore dist/ --exec babel-node src/generate.js"
+  },
+  "author": "<kevin@avrillon.me>",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.5.4",
+    "nodemon": "^1.19.1",
+    "rimraf": "^2.6.3"
+  }
+}

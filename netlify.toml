@@ -1,3 +1,7 @@
+[build]
+  publish = "dist"
+  command = "yarn generate"
+  
 [[headers]]
   for = "/*"
     [headers.values]
