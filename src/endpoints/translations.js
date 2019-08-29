@@ -1,35 +1,39 @@
-import fs from 'fs';
+import fs from "fs";
 
 const NB_BUSINESSES = 120;
 
-export function generate(destination) {  
+export function generate(destination) {
   const folder = `${destination}/translations`;
   const objects = [
     {
-      locale: 'fr',
+      locale: "fr",
       translations: {
-        about: 'À propos de nous',
-        hello: 'Bonjour le monde !',
+        about: "À propos de nous",
+        hello: "Bonjour le monde !"
       }
     },
     {
-      locale: 'en',
+      locale: "en",
       translations: {
-        about: 'About us',
-        hello: 'Hello world!',
+        about: "About us",
+        hello: "Hello world!"
       }
     },
     {
-      locale: 'ja',
+      locale: "ja",
       translations: {
-        about: '私達について',
-        hello: 'こんにちは、世界',
+        about: "私達について",
+        hello: "こんにちは、世界"
       }
     }
   ];
-  
+
   fs.mkdirSync(folder);
-  objects.forEach((o) => {
-    fs.writeFileSync(`${folder}/${o.locale}.json`, JSON.stringify(o.translations), () => {});
+  objects.forEach(o => {
+    fs.writeFileSync(
+      `${folder}/${o.locale}.json`,
+      JSON.stringify({ translation: o.translations }),
+      () => {}
+    );
   });
 }
