@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-const NB_BUSINESSES = 120;
+const NB_BUSINESSES = 500;
 
 export function generate(destination) {  
   const folder = `${destination}/businesses`;
@@ -17,6 +17,8 @@ export function generate(destination) {
       id,
       name: `Bismock ${id}`,
       slug: `bismock-${id}`,
+      address: `${id} business road, 1337 Mock`,
+      position: { lat: getRandomInRange(-180, 180, 3), lng: getRandomInRange(-180, 180, 3)},
       grade: reviews.reduce((acc, value) => acc + value.grade, 0)/reviews.length,
       reviews,
     }
@@ -28,4 +30,9 @@ export function generate(destination) {
   objects.forEach((o) => {
     fs.writeFileSync(`${folder}/${o.id}.json`, JSON.stringify(o), () => {});
   });
+}
+
+function getRandomInRange(from, to, fixed) {
+  return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+  // .toFixed() returns string, so ' * 1' is a trick to convert to number
 }
