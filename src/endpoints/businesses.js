@@ -1,27 +1,37 @@
 import fs from 'fs';
+import faker from 'faker';
+import slugify from 'slugify';
 
-const NB_BUSINESSES = 500;
+const NB_BUSINESSES = 200;
+const SLUGIFY_CONF = {lower: true};
 
-export function generate(destination) {  
+export function generate(destination) {
   const folder = `${destination}/businesses`;
+  const brand = faker.company.companyName();
   const objects = Array(NB_BUSINESSES).fill().map((_, i) => {
-    const id = i + 1;
+  const id = i + 1;
 
-    const reviews = Array(Math.floor(Math.random() * 10)).fill().map((_, j) => ({
-      grade: Math.floor(Math.random() * 5) + 1,
-      name: `Reviewer ${j+1}`,
-      comment: `Comment for reviewer ${j+1} (business ${id})`
-    }));
-    
-    return {
-      id,
-      name: `Bismock ${id}`,
-      slug: `bismock-${id}`,
-      address: `${id} business road, 1337 Mock`,
-      position: { lat: getRandomInRange(-85, 85, 3), lng: getRandomInRange(-180, 180, 3)},
-      grade: reviews.reduce((acc, value) => acc + value.grade, 0)/reviews.length,
-      reviews,
-    }
+  const reviews = Array(Math.floor(Math.random() * 10)).fill().map((_, j) => ({
+    grade: Math.floor(Math.random() * 5) + 1,
+    name: faker.fake('{{name.firstName}} {{name.lastName}}'),
+    comment: faker.lorem.sentence()
+  }));
+    //console.log(faker.fake("{{address.city}} - {{address.lastName}}, {{name.firstName}} {{name.suffix}}"));
+
+  const city = faker.address.city();
+  const zip = faker.address.zipCode();
+  const street = faker.fake('{{random.number}} {{address.streetName}} {{address.streetSuffix}}');
+  const lat = parseFloat(faker.address.latitude());
+  const lng = parseFloat(faker.address.longitude());
+  return {
+    id,
+    name: `${brand} ${city}`,
+    slug: slugify(`${brand} ${city}`, SLUGIFY_CONF),
+    address: `${street}, ${zip} ${city}`,
+    position: { lat: lat, lng: lng},
+    grade: reviews.reduce((acc, value) => acc + value.grade, 0)/reviews.length,
+    reviews,
+  }
   });
   
   fs.mkdirSync(folder);
