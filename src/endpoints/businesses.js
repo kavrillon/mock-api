@@ -7,7 +7,7 @@ const SLUGIFY_CONF = {lower: true};
 
 export function generate(destination) {
   const folder = `${destination}/businesses`;
-  const brand = faker.company.companyName();
+  const brand = faker.company.companyName(0);
   const objects = Array(NB_BUSINESSES).fill().map((_, i) => {
   const id = i + 1;
 
