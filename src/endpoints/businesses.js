@@ -16,18 +16,21 @@ export function generate(destination) {
     name: faker.fake('{{name.firstName}} {{name.lastName}}'),
     comment: faker.lorem.sentence()
   }));
-    //console.log(faker.fake("{{address.city}} - {{address.lastName}}, {{name.firstName}} {{name.suffix}}"));
 
   const city = faker.address.city();
-  const zip = faker.address.zipCode();
-  const street = faker.fake('{{random.number}} {{address.streetName}} {{address.streetSuffix}}');
+  const country = faker.address.country();
   const lat = parseFloat(faker.address.latitude());
   const lng = parseFloat(faker.address.longitude());
   return {
     id,
     name: `${brand} ${city}`,
     slug: slugify(`${brand} ${city}`, SLUGIFY_CONF),
-    address: `${street}, ${zip} ${city}`,
+    address: {
+      country: country,
+      city,
+      zip: faker.address.zipCode(),
+      street: faker.fake('{{random.number}} {{address.streetName}} {{address.streetSuffix}}')
+    },
     position: { lat: lat, lng: lng},
     grade: reviews.reduce((acc, value) => acc + value.grade, 0)/reviews.length,
     reviews,
