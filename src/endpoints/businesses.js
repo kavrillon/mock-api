@@ -18,7 +18,7 @@ export function generate(destination) {
       name: `Bismock ${id}`,
       slug: `bismock-${id}`,
       address: `${id} business road, 1337 Mock`,
-      position: { lat: getRandomInRange(-180, 180, 3), lng: getRandomInRange(-180, 180, 3)},
+      position: { lat: getRandomInRange(-85, 85, 3), lng: getRandomInRange(-180, 180, 3)},
       grade: reviews.reduce((acc, value) => acc + value.grade, 0)/reviews.length,
       reviews,
     }
