@@ -25,7 +25,7 @@ export function generate(destination) {
     id,
     name: `${brand} ${city}`,
     slug: slugify(`${brand} ${city}`, SLUGIFY_CONF),
-    image: faker.image.imageUrl(),
+    image: faker.image.cats(),
     address: {
       country: country,
       city,
