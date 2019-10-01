@@ -2,7 +2,7 @@ import fs from 'fs';
 import faker from 'faker';
 import slugify from 'slugify';
 
-const NB_BUSINESSES = 200;
+const NB_BUSINESSES = 150;
 const SLUGIFY_CONF = {lower: true};
 
 export function generate(destination) {
