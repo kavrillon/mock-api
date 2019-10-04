@@ -15,14 +15,21 @@ export function generate(destination) {
 
       const headerLinks = Array(Math.floor(Math.random() * 5))
         .fill()
-        .map((_, j) => faker.lorem.word());
+        .map(_ => ({
+          name: faker.lorem.word(),
+          link: 'https://www.google.com'
+        }));
+
+      const locales = Array(Math.floor(Math.random() * 5))
+        .fill()
+        .map(_ => faker.random.locale());
 
       return {
         id,
         name: brand,
         slug: slugify(brand, SLUGIFY_CONF),
-        locales: ['en', 'fr'],
-        defaultLocale: 'en',
+        locales: locales,
+        defaultLocale: locales[0],
         headerLinks
       };
     });
