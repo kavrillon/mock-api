@@ -13,10 +13,10 @@ export function generate(destination) {
       const id = i + 1;
       const brand = faker.company.companyName(0);
 
-      const headerLinks = Array(Math.floor(Math.random() * 5))
+      const headerLinks = Array(Math.floor(Math.random() * 3) + 1)
         .fill()
-        .map(_ => ({
-          name: faker.lorem.word(),
+        .map((_, j) => ({
+          name: `Link ${j + 1}`,
           link: 'https://www.google.com'
         }));
 
