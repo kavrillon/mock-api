@@ -44,6 +44,20 @@ export function generate(destination) {
           map: 'Mapa'
         }
       }
+    },
+    {
+      locale: 'ar',
+      translations: {
+        home: {
+          title: 'صفحة البحث',
+          search: 'العثور على نقطة البيع',
+          more: 'عرض المزيد من النتائج'
+        },
+        business: {
+          latestReviews: 'أحدث الاستعراضات',
+          map: 'خريطة'
+        }
+      }
     }
   ];
 
