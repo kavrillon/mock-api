@@ -1,29 +1,48 @@
-import fs from "fs";
-
-const NB_BUSINESSES = 120;
+import fs from 'fs';
 
 export function generate(destination) {
   const folder = `${destination}/translations`;
   const objects = [
     {
-      locale: "fr",
+      locale: 'fr',
       translations: {
-        about: "À propos de nous",
-        hello: "Bonjour le monde !"
+        home: {
+          title: 'Page de recherche',
+          search: 'Trouver un point de vente',
+          more: 'Afficher plus de résultats'
+        },
+        business: {
+          latestReviews: 'Derniers avis',
+          map: 'Carte'
+        }
       }
     },
     {
-      locale: "en",
+      locale: 'en',
       translations: {
-        about: "About us",
-        hello: "Hello world!"
+        home: {
+          title: 'Search page',
+          search: 'Find a shop',
+          more: 'Show more results'
+        },
+        business: {
+          latestReviews: 'Latest reviews',
+          map: 'Map'
+        }
       }
     },
     {
-      locale: "ja",
+      locale: 'es',
       translations: {
-        about: "私達について",
-        hello: "こんにちは、世界"
+        home: {
+          title: 'Página de búsqueda',
+          search: 'Encuentra una tienda',
+          more: 'Mostrar más resultados'
+        },
+        business: {
+          latestReviews: 'Últimas revisiones',
+          map: 'Mapa'
+        }
       }
     }
   ];
