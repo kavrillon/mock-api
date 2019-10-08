@@ -20,21 +20,14 @@ export function generate(destination) {
           link: 'https://www.google.com'
         }));
 
-      const locales = Array(Math.floor(Math.random() * 5 + 1))
-        .fill()
-        .map(_ => faker.random.locale().split('_')[0])
-        .reduce(
-          (unique, item) =>
-            unique.includes(item) ? unique : [...unique, item],
-          []
-        );
+      const locales = ['ar', 'en', 'fr'];
 
       return {
         id,
         name: brand,
         slug: slugify(brand, SLUGIFY_CONF),
         locales: locales,
-        defaultLocale: locales[0],
+        defaultLocale: 'fr',
         headerLinks
       };
     });
