@@ -24,6 +24,7 @@ export function generate(destination) {
 
       return {
         id,
+        url: 'https://gator-lpe.netlify.com',
         name: brand,
         slug: slugify(brand, SLUGIFY_CONF),
         locales: locales,
