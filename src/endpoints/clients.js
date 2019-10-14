@@ -42,6 +42,9 @@ export function generate(destination) {
               business: {
                 latestReviews: 'Derniers avis',
                 map: 'Carte'
+              },
+              search: {
+                placeholder: 'Nom de magasin, ville, etc.'
               }
             }
           },
@@ -55,6 +58,9 @@ export function generate(destination) {
               business: {
                 latestReviews: 'Latest reviews',
                 map: 'Map'
+              },
+              search: {
+                placeholder: 'Shop name, city, etc.'
               }
             }
           },
@@ -68,6 +74,9 @@ export function generate(destination) {
               business: {
                 latestReviews: 'Últimas revisiones',
                 map: 'Mapa'
+              },
+              search: {
+                placeholder: 'Nombre de la tienda, ciudad, etc.'
               }
             }
           },
@@ -81,6 +90,9 @@ export function generate(destination) {
               business: {
                 latestReviews: 'أحدث الاستعراضات',
                 map: 'خريطة'
+              },
+              search: {
+                placeholder: 'اسم المحل ، المدينة ، إلخ'
               }
             }
           }
