@@ -21,6 +21,22 @@ export function generate(destination) {
         }));
 
       const locales = ['ar', 'en', 'fr'];
+      const theme = {
+        backgroundColorMain: '#fff',
+        backgroundColorAccent: '#28283f',
+        backgroundColorAlternate: 'f4f4f4',
+        backgroundColorStrong: '#141414',
+        textColorDark: '#222',
+        textColorAccent: '#28283f',
+        textColorMild: '#8e8e8e',
+        textColorLight: '#fff',
+        textColorLink: '#ee212b',
+        backgroundColorCta: '#ee212b',
+        backgroundColorFullStar: '#ffe000',
+        backgroundColorEmptyStar: 'transparent',
+        textColorCta: '#fff',
+        borderColor: '#d8d8d8'
+      };
 
       return {
         id,
@@ -31,6 +47,7 @@ export function generate(destination) {
         locales: locales,
         defaultLocale: 'fr',
         headerLinks,
+        theme,
         messages: {
           fr: {
             translation: {
