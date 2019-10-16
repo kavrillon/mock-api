@@ -4,6 +4,32 @@ import slugify from 'slugify';
 
 const NB_CLIENTS = 10;
 const SLUGIFY_CONF = { lower: true };
+const THEMES = [
+  {
+    backgroundColorMain: '#fff',
+    backgroundColorAlternate: '#059347',
+    backgroundColorAccent: '#fff',
+    backgroundColorCta: '#ffd33d',
+    textColorMain: '#000',
+    textColorAlternate: '#fff',
+    textColorAccent: '#ffd33d',
+    textColorLink: '#059347',
+    textColorCta: '#fff'
+  },
+  {
+    backgroundColorMain: '#fff',
+    backgroundColorAlternate: '#28283f',
+    backgroundColorAccent: '#f4f4f4',
+    backgroundColorCta: '#ee212b',
+    textColorMain: '#222',
+    textColorAlternate: '#222',
+    textColorAccent: '#000',
+    textColorLink: '#ee212b',
+    textColorCta: '#fff'
+  }
+];
+
+const LOCALES = [['ar', 'en', 'fr', 'es'], ['ar', 'en', 'fr']];
 
 export function generate(destination) {
   const folder = `${destination}/clients`;
@@ -20,33 +46,15 @@ export function generate(destination) {
           link: 'https://www.google.com'
         }));
 
-      const locales = ['ar', 'en', 'fr'];
-      const theme = {
-        backgroundColorMain: '#fff',
-        backgroundColorAccent: '#28283f',
-        backgroundColorAlternate: 'f4f4f4',
-        backgroundColorStrong: '#141414',
-        textColorDark: '#222',
-        textColorAccent: '#28283f',
-        textColorMild: '#8e8e8e',
-        textColorLight: '#fff',
-        textColorLink: '#ee212b',
-        backgroundColorCta: '#ee212b',
-        backgroundColorFullStar: '#ffe000',
-        backgroundColorEmptyStar: 'transparent',
-        textColorCta: '#fff',
-        borderColor: '#d8d8d8'
-      };
-
       return {
         id,
         index: 'test',
         name: brand,
         slug: slugify(brand, SLUGIFY_CONF),
-        locales: locales,
+        locales: LOCALES[i] ? LOCALES[i] : LOCALES[0],
         defaultLocale: 'fr',
         headerLinks,
-        theme,
+        theme: THEMES[i] ? THEMES[i] : THEMES[0],
         messages: {
           fr: {
             translation: {
