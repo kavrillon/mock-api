@@ -40,7 +40,6 @@ export function generate(destination) {
 
       return {
         id,
-        url: 'https://gator-lpe.netlify.com',
         index: 'test',
         name: brand,
         slug: slugify(brand, SLUGIFY_CONF),
