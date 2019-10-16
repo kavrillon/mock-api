@@ -22,7 +22,7 @@ const THEMES = [
     backgroundColorAccent: '#f4f4f4',
     backgroundColorCta: '#ee212b',
     textColorMain: '#222',
-    textColorAlternate: '#222',
+    textColorAlternate: '#fff',
     textColorAccent: '#000',
     textColorLink: '#ee212b',
     textColorCta: '#fff'
