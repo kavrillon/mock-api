@@ -10,7 +10,7 @@ export function generate(destination) {
   const objects = Array(NB_CLIENTS)
     .fill()
     .map((_, i) => {
-      const id = i + 1;
+      const id = i;
       const brand = faker.company.companyName(0);
 
       const headerLinks = Array(Math.floor(Math.random() * 3) + 1)
