@@ -31,7 +31,7 @@ const THEMES = [
 
 const INDEXES = ['test', 'XDFG'];
 
-const LOCALES = [['ar', 'en', 'fr', 'es'], ['ar', 'en', 'fr']];
+const LOCALES = [['ar', 'en'], ['es', 'en', 'fr']];
 
 export function generate(destination) {
   const folder = `${destination}/clients`;
