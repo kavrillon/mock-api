@@ -2,7 +2,7 @@ import fs from 'fs';
 import faker from 'faker';
 import slugify from 'slugify';
 
-const NB_CLIENTS = 10;
+const NB_CLIENTS = 2;
 const SLUGIFY_CONF = { lower: true };
 const THEMES = [
   {
@@ -29,6 +29,8 @@ const THEMES = [
   }
 ];
 
+const INDEXES = ['test', 'XDFG'];
+
 const LOCALES = [['ar', 'en', 'fr', 'es'], ['ar', 'en', 'fr']];
 
 export function generate(destination) {
@@ -48,7 +50,7 @@ export function generate(destination) {
 
       return {
         id,
-        index: 'test',
+        index: INDEXES[i] ? INDEXES[i] : INDEXES[0],
         name: brand,
         slug: slugify(brand, SLUGIFY_CONF),
         locales: LOCALES[i] ? LOCALES[i] : LOCALES[0],
