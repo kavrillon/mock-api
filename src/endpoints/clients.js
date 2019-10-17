@@ -32,6 +32,7 @@ const THEMES = [
 const INDEXES = ['test', 'XDFG'];
 
 const LOCALES = [['ar', 'en'], ['es', 'en', 'fr']];
+const DEFAULT_LOCALES = ['en', 'fr'];
 
 export function generate(destination) {
   const folder = `${destination}/clients`;
@@ -54,7 +55,9 @@ export function generate(destination) {
         name: brand,
         slug: slugify(brand, SLUGIFY_CONF),
         locales: LOCALES[i] ? LOCALES[i] : LOCALES[0],
-        defaultLocale: 'fr',
+        defaultLocale: DEFAULT_LOCALES[i]
+          ? DEFAULT_LOCALES[i]
+          : DEFAULT_LOCALES[0],
         headerLinks,
         theme: THEMES[i] ? THEMES[i] : THEMES[0],
         messages: {
@@ -65,7 +68,7 @@ export function generate(destination) {
                 search: 'Trouver un point de vente',
                 more: 'Afficher plus de résultats'
               },
-              business: {
+              location: {
                 latestReviews: 'Derniers avis',
                 map: 'Carte'
               },
@@ -81,12 +84,27 @@ export function generate(destination) {
                 search: 'Find a shop',
                 more: 'Show more results'
               },
-              business: {
+              location: {
+                itinerary: 'Itinerary',
+                website: 'Website',
+                email: 'Email',
+                phone: 'Phone',
+                hours: 'Opening hours',
+                opened: 'Opened',
+                closed: 'Closed',
+                products: 'Our products',
+                services: 'Our services',
+                description: 'Description',
+                find: 'Find your locations in:',
                 latestReviews: 'Latest reviews',
                 map: 'Map'
               },
               search: {
                 placeholder: 'Shop name, city, etc.'
+              },
+              footer: {
+                legals: 'Legals',
+                cookie: 'Personal data & cookies'
               }
             }
           },
@@ -97,7 +115,7 @@ export function generate(destination) {
                 search: 'Encuentra una tienda',
                 more: 'Mostrar más resultados'
               },
-              business: {
+              location: {
                 latestReviews: 'Últimas revisiones',
                 map: 'Mapa'
               },
@@ -113,7 +131,7 @@ export function generate(destination) {
                 search: 'العثور على نقطة البيع',
                 more: 'عرض المزيد من النتائج'
               },
-              business: {
+              location: {
                 latestReviews: 'أحدث الاستعراضات',
                 map: 'خريطة'
               },
