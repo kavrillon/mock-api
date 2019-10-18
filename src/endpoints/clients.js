@@ -53,6 +53,7 @@ export function generate(destination) {
         id,
         index: INDEXES[i] ? INDEXES[i] : INDEXES[0],
         name: brand,
+        logo: 'https://logoipsum.com/assets/logo/logo-3.svg',
         slug: slugify(brand, SLUGIFY_CONF),
         locales: LOCALES[i] ? LOCALES[i] : LOCALES[0],
         defaultLocale: DEFAULT_LOCALES[i]
