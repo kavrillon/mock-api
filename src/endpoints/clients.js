@@ -53,7 +53,8 @@ export function generate(destination) {
         id,
         index: INDEXES[i] ? INDEXES[i] : INDEXES[0],
         name: brand,
-        logo: 'https://logoipsum.com/assets/logo/logo-3.svg',
+        logo:
+          'https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo3.png',
         slug: slugify(brand, SLUGIFY_CONF),
         locales: LOCALES[i] ? LOCALES[i] : LOCALES[0],
         defaultLocale: DEFAULT_LOCALES[i]
