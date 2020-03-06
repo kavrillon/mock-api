@@ -1,6 +1,7 @@
 import { generate as generateBusinesses } from './endpoints/businesses';
 import { generate as generateClients } from './endpoints/clients';
 import { generate as generateTranslations } from './endpoints/translations';
+import { generate as generateReviews } from './endpoints/reviews';
 import fs from 'fs';
 
 const FOLDER_OUTPUT = './dist';
@@ -12,3 +13,4 @@ fs.mkdirSync(FOLDER_API);
 generateBusinesses(FOLDER_API);
 generateTranslations(FOLDER_API);
 generateClients(FOLDER_API);
+generateReviews(FOLDER_API);
