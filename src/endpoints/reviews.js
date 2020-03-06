@@ -2,7 +2,7 @@ import fs from 'fs';
 import faker from 'faker';
 import { getRandomInRange } from '../lib/numbers';
 
-const NB_REVIEWS = 50;
+const NB_REVIEWS = 100;
 const SHOP_IDS = [409, 361, 326, 285];
 
 export function generate(destination) {
