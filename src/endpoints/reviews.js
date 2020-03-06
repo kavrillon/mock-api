@@ -12,9 +12,9 @@ export function generate(destination) {
     .fill()
     .map((_, i) => ({
       answer: faker.random.boolean()
-        ? faker.lorem.sentences(getRandomInRange(0, 5, false))
+        ? faker.lorem.sentences(getRandomInRange(1, 6, false))
         : null,
-      comment: faker.lorem.sentences(getRandomInRange(0, 5, false)),
+      comment: faker.lorem.sentences(getRandomInRange(1, 6, false)),
       date: faker.date.past(),
       id: i + 1,
       grade: Math.floor(Math.random() * 5) + 1,
