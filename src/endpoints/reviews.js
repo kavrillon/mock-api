@@ -11,8 +11,10 @@ export function generate(destination) {
   const objects = Array(NB_REVIEWS)
     .fill()
     .map((_, i) => ({
-      answer: faker.random.boolean() ? faker.lorem.sentence() : null,
-      comment: faker.lorem.sentence(),
+      answer: faker.random.boolean()
+        ? faker.lorem.sentences(getRandomInRange(0, 5, false))
+        : null,
+      comment: faker.lorem.sentences(getRandomInRange(0, 5, false)),
       date: faker.date.past(),
       id: i + 1,
       grade: Math.floor(Math.random() * 5) + 1,
