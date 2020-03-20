@@ -3,7 +3,7 @@ import faker from 'faker';
 import { getRandomInRange } from '../lib/numbers';
 
 const NB_REVIEWS = 100;
-const SHOP_IDS = [409, 361, 326, 285];
+const SHOP_IDS = [409, 446, 1048, 1049, 1054];
 
 export function generate(destination) {
   const folder = `${destination}/reviews`;
